@@ -434,7 +434,7 @@ abstract class Hooks {
 	 *
 	 * @return string The name of the current hook.
 	 */
-	public static function current(){
+	public static function current() {
 		return end( self::$current );
 	}
 	
@@ -449,7 +449,7 @@ abstract class Hooks {
 	 *
 	 * @return int The number of times the hook's been called.
 	 */
-	public static function did( $hook ){
+	public static function did( $hook ) {
 		if ( ! isset( self::$called[ $hook ] ) ) {
 			return 0;
 		}
@@ -472,7 +472,7 @@ abstract class Hooks {
 	 *
 	 * @return bool|int Wether it exists or not (or the priority of the callback)
 	 */
-	public static function exists( $hook, $callback = false ){
+	public static function exists( $hook, $callback = false ) {
 		// Test if the hook exists in the registry and isn't empty.
 		$has = isset( self::$registry[ $hook ] ) && ! empty( self::$registry[ $hook ] );
 		
